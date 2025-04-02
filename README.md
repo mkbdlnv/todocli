@@ -40,6 +40,14 @@ go run cmd/main.go
 - `internal/storage/` — интерфейс и реализация хранения задач
 - `tasks.json` — файл, в который сохраняются задачи
 
+## Тесты
+Для запуска тестов можете использовать комманды:
+```bash
+go test ./... -v #для запуска всех тестов
+go test ./... -coverprofile=coverage.out #для создания файла отчета и покрытием
+go tool cover -html=coverage.out # для генерации html отчета
+```
+
 
 ## License
 
