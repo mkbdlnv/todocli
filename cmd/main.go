@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-	"path/filepath"
 	"todocli/internal/app"
 )
 
@@ -14,13 +13,7 @@ func main() {
 		}
 	}()
 
-	cwd, err := os.Getwd()
-	const tasksFilename = "tasks.json"
-
-	if err != nil {
-		panic("Cannot get working directory")
-	}
-	tasksPath := filepath.Join(filepath.Dir(cwd), tasksFilename)
+	tasksPath := "tasks.json"
 
 	app := app.NewTodocliApp(tasksPath)
 	app.Run()
